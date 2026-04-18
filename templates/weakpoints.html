@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Weakpoints Quiz{% endblock %}
+
+{% block content %}
+
+<h1>Weakpoint Analyzer</h1>
+
+<p>
+    Answer the questions below to identify weaknesses in your lifts and receive
+    a tailored set of exercises.
+</p>
+
+<br>
+
+<form action="{{ url_for('solutions') }}" method="POST" onsubmit="handleQuizSubmit()">
+
+    <!-- SQUAT -->
+    <h2>Squat</h2>
+
+    <label>Where do you fail the squat?</label><br>
+    <select name="squat">
+        <option value="bottom">Bottom</option>
+        <option value="middle">Mid-range</option>
+        <option value="top">Near lockout</option>
+    </select>
+
+    <br><br>
+
+    <!-- BENCH -->
+    <h2>Bench Press</h2>
+
+    <label>Where do you fail the bench press?</label><br>
+    <select name="bench">
+        <option value="bottom">Off the chest</option>
+        <option value="middle">Mid-range</option>
+        <option value="top">Near Lockout</option>
+    </select>
+
+    <br><br>
+
+    <!-- DEADLIFT -->
+    <h2>Deadlift</h2>
+
+    <label>Where do you fail the deadlift?</label><br>
+    <select name="deadlift">
+        <option value="bottom">Off the floor</option>
+        <option value="middle">Mid-range</option>
+        <option value="top">Near Lockout</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit" id="submitBtn">Get My Plan</button>
+
+</form>
+
+{% endblock %}

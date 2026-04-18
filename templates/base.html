@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Powerlifting App{% endblock %}</title>
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='files/style.css') }}">
+
+
+</head>
+<body>
+
+<!-- Background Overlay -->
+<div class="background"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <h1 class="logo">Powerlifting Weakpoint Analyser</h1>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('concepts') }}">Concepts</a></li>
+            <li><a href="{{ url_for('weakpoints') }}">Quiz</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+<script src="{{ url_for('static', filename='files/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Your Results{% endblock %}
+
+{% block content %}
+
+<h1>Your Weakpoint Analysis</h1>
+
+<h2>Bench Press</h2>
+
+<div class="narrow-content justified-text">
+    <p>{{ rec.bench.comment }}</p>
+</div>
+
+<h3>Main Lifts</h3>
+<ul>
+    {% for item in rec.bench.main %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Accessory Work</h3>
+<ul>
+    {% for item in rec.bench.accessory %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>Squat</h2>
+
+<div class="narrow-content justified-text">
+    <p>{{ rec.squat.comment }}</p>
+</div>
+
+<h3>Main Lifts</h3>
+<ul>
+    {% for item in rec.squat.main %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Accessory Work</h3>
+<ul>
+    {% for item in rec.squat.accessory %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>Deadlift</h2>
+
+<div class="narrow-content justified-text">
+    <p>{{ rec.deadlift.comment }}</p>
+</div>
+
+<h3>Main Lifts</h3>
+<ul>
+    {% for item in rec.deadlift.main %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Accessory Work</h3>
+<ul>
+    {% for item in rec.deadlift.accessory %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

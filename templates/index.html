@@ -1,12 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Layout</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h1>Powerlifting Weakpoint Analyser</h1>
+<div class="narrow-content">
+<p>
+    If you could do only three movements for the rest of your life to be as strong as possible, you should choose the squat, bench press and deadlift. These three movements/lifts are tested in the sport of powerlifting, but transfer to all sports.
+
+<h2>How It Works</h2>
+
+<p>
+    Below is a brief overview of these three lifts for those unfamiliar with strength building. On the “About” page, I explain the rationale and physics behind the various tricks and techniques used to break through plateaus in strength building. On the concepts page, I break down the exercises and the concepts that apply the physics. On the “Quiz” page, you will be asked a series of questions to find out where you are failing your lifts. Once you submit your answers, you will then be given the results of your quiz, and the exercises you should add/switch into your workout to fix them.
+</p>
+
+<hr>
+
+<!-- SQUAT -->
+<div class="lift-section">
+    <img src="{{ url_for('static', filename='images/Squat.png') }}" alt="Squat">
+
+    <div class="lift-text">
+        <h2>The Squat</h2>
+        <p>
+            Everyone intuitively knows what a squat is. You sit down, and stand back up again with a barbell on your back.
+            The bar should rest on top of your rear deltoids muscles, and be supported by your arms. Have your feet about shoulder width apart,
+            wherever is comfortable, with your toes pointed slightly out. Exhale all your breath, then take in a huge gulp of air into your belly
+            and brace your core as if you’re about to be punched in the gut. Hold your breath in, and look up to the point where the wall in front
+            of you meets the ceiling. Sit down and back slowly, ensuring your chest and head stay up the whole time, then at the bottom, reverse
+            the weight and push your knees out.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<!-- BENCH -->
+<div class="lift-section">
+    <img src="{{ url_for('static', filename='images/BenchPress.png') }}" alt="Bench Press">
+
+    <div class="lift-text">
+        <h2>The Bench Press</h2>
+        <p>
+            Safety is always first with the bench press, so make sure you have safety pins protecting your face or a spotter to catch the weight if you’re going heavy.
+            Lie back on the bench, and grab the bar with your hands about shoulder width apart, then twist your left hand counterclockwise,
+            and your right hand clockwise, as if you’re trying to bend the bar. Squeeze your shoulder blades together and arch your back slightly.
+            You’re now ready to lift the bar out from the hooks. Once the bar is out, pause to steady the weight. Lower it in a controlled way towards
+            your sternum, keeping your elbows tucked in at a 45 degree angle. Once the bar touches your chest, drive it up and back, engaging your lats,
+            pectorals and triceps.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<!-- DEADLIFT -->
+<div class="lift-section">
+    <img src="{{ url_for('static', filename='images/Deadlift.png') }}" alt="Deadlift">
+
+    <div class="lift-text">
+        <h2>The Deadlift</h2>
+        <p>
+            The idea is to pull the bar from a dead stop on the ground to standing upright. Stand about shoulder width apart, chest high,
+            and look where the wall meets the ceiling. Bend down and grab the bar, roll it into your shins and brace your core hard.
+            Maintain a neutral spine throughout. Instead of pulling, push your feet into the ground. Once the bar passes your knees,
+            drive through with your glutes until you lock out fully at the top.
+        </p>
+    </div>
+</div>
+</div>
+{% endblock %}

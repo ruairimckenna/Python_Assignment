@@ -58,11 +58,12 @@ This is also true for a bench press. We should push ourselves away from the bar,
 
 
 5 page:
-Home:
-About:
-Weakpoint quiz:
-Solution workout:
-Contact:
+Home: Explain the exercises
+About: Explain the physics
+Concepts: Lifting concepts
+Weakpoint quiz: Quiz
+Solution workout: Answers
+
 
 
 Weakpoints:
